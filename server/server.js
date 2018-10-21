@@ -53,7 +53,7 @@ app.delete('/todos/:id', (req, res) => {
        if(!todo){
          res.status(404).send('Todo not found');
        }
-       res.status(200).send(todo);
+       res.status(200).send({todo});
      }).catch((e) => res.stats(400).send());
    }
 });
